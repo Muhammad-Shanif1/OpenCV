@@ -1,0 +1,70 @@
+🔶 Image Filtering
+
+Image filtering refers to the process of modifying or enhancing an image. Filters are used to emphasize or remove certain features or components of an image. The process is broadly divided into subcategories, as shown in the diagram.
+
+✅ Main Branches of Image Filtering:
+1. Blurring
+
+Blurring is a technique used to reduce image noise and detail. It is one of the most common filtering techniques.
+
+Under "Blurring", we have:
+
+◽ Gaussian Blur
+
+Applies a Gaussian function (bell-shaped curve) to the image.
+
+Smooths the image by averaging the pixels with a Gaussian kernel.
+
+Good for reducing Gaussian noise.
+
+More natural than other linear blurs.
+
+◽ Median Blur
+
+Replaces each pixel with the median of the surrounding pixels.
+
+Very effective for removing salt-and-pepper noise.
+
+Preserves edges better than Gaussian blur.
+
+◽ Bilateral Filter
+
+Performs edge-preserving smoothing.
+
+Considers both spatial closeness and intensity difference.
+
+Great for noise reduction without losing edge sharpness.
+
+2. What Is Noise?
+
+This refers to unwanted random variations of brightness or color information in images, often due to sensor or transmission errors. Common types:
+
+Gaussian noise
+
+Salt and pepper noise
+
+Speckle noise
+
+Filters like Median Blur and Bilateral Filter are particularly designed to combat noise.
+
+3. What Is Smoothing?
+
+Smoothing is a technique to reduce sharp transitions in images, often used to remove high-frequency components (like noise or texture) and to create a cleaner image.
+
+◽ Normal Blur (Averaging)
+
+Also known as Box Blur or Average Blur.
+
+Each pixel is replaced with the average value of its neighboring pixels.
+
+Simple but effective for reducing noise in low-frequency areas.
+
+4. Kernel
+
+A kernel is a small matrix used for filtering operations.
+
+It's a grid of numbers (like 3x3 or 5x5) that slides across the image.
+
+The values in the kernel are multiplied with the corresponding pixels in the image.
+
+Depending on kernel values, it can perform blurring, sharpening, edge detection, etc.

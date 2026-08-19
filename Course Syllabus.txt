@@ -1,0 +1,27 @@
+Course Syllabus:
+00:04:31 – Phase 0: Getting Ready for OpenCV
+Introduction to OpenCV, Importance of Computer Vision, Where OpenCV is Used, Key Features of OpenCV, Prerequisites & Tools Setup
+
+00:31:25 – Phase 1: Getting Started with OpenCV
+Installing OpenCV (cv2), Reading & displaying images, Saving images, Image dimensions & channels, Grayscale conversion
+
+01:06:06 – Phase 2: Image Transformations & Manipulation
+Resizing & scaling images, Cropping using slicing, Rotating and flipping images, Drawing shapes (lines, circles), Adding text on images
+
+01:44:17 – Phase 3: Basic Image Drawing Techniques
+Drawing lines, rectangles, circles, Adding custom text on images, Creating basic graphic overlays
+
+02:14:42 – Phase 4: Working with Video & Webcam
+Capturing video from webcam (cv2.VideoCapture), Frame-by-frame processing, Real-time filters, Saving video (cv2.VideoWriter)
+
+02:51:28 – Phase 5: Image Filtering & Blurring
+Gaussian blur, Median blur, Sharpening filters, Smoothing noisy images, Enhancing image clarity
+
+03:23:18 – Phase 6: Edge Detection & Thresholding
+Canny edge detection, Binary & adaptive thresholding, Bitwise operations (AND, OR, NOT), Extracting outlines from images
+
+03:47:36 – Phase 7: Contours & Shape Detection
+Finding contours, Drawing contours on images, Shape detection using approxPolyDP, Object recognition basics
+
+04:22:52 – Phase 8: Face & Object Detection
+Using Haar Cascades, Face detection, Eye & smile detection, Pre-trained classifiers, Drawing boxes on detected faces

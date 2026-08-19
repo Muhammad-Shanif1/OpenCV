@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="opencv opencv master data-haarcascades">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Haarcascades/opencv opencv master data-haarcascades.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

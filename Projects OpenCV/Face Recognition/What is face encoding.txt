@@ -1,0 +1,17 @@
+🔍 What is Face Encoding?
+
+It's a numerical representation of the key features of a face.
+
+Typically, this encoding is a vector (e.g., a 128-dimensional vector in the popular face_recognition Python library).
+
+These vectors capture distinctive facial features, such as the distance between the eyes, the shape of the jawline, the length of the nose, etc.
+
+🧠 How Does It Work?
+
+Face Detection: First, the system detects a face in an image.
+
+Facial Landmark Detection: The system locates key points on the face (eyes, nose, mouth, etc.).
+
+Feature Extraction: It analyzes the facial structure and converts it into a compact encoding.
+
+Encoding = Vector: This is usually a list or array of numbers (e.g., [0.128, -0.045, 0.312, ...]) that uniquely describes that face.

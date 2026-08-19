@@ -1,0 +1,20 @@
+🧠 What Is an Edge?
+An edge in a picture is where things change — like the border between:
+A black table and a white wall
+A person’s face and the background
+The edge of a shape like a circle or square
+Edges help us understand where objects begin and end in a picture.
+
+🧐 How Does a Computer "See" Edges?
+A computer sees a picture as a grid of numbers — each number is a brightness level:
+
+Pixels (brightness)	50	52	55	190	195
+
+See how the numbers go from 55 to 190? That’s a big jump — and the computer thinks:
+“Ah! Something changed here — this might be an edge!”
+
+✅ So, To Detect Edges:
+
+Look at each pixel
+Compare it with its neighbors
+If the difference is big → it's an edge

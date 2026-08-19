@@ -1,0 +1,26 @@
+🔍 What is approxPolyDP?
+
+cv2.approxPolyDP() is a function in OpenCV that simplifies a shape (a curve or a contour) by reducing the number of points while keeping the shape roughly the same.
+
+🧠 Why use it?
+
+When you detect contours in an image, they may have too many points (especially if the edges are a bit noisy). 
+approxPolyDP helps by giving you a simplified version of that contour with fewer points — which makes it easier to 
+recognize shapes like triangles, rectangles, circles, etc.
+
+🧪 How does it work?
+cv2.approxPolyDP(curve, epsilon, closed)
+
+📌 Parameters:
+
+1) curve – The original contour (usually from cv2.findContours).
+
+2) epsilon – The maximum distance/difference between the original curve and the simplified one.
+   It ensures how much the approximated contour is simplied as caompared to orginal contour . Think of it as a tolerance:
+   Smaller epsilon = more accurate (more points/corners)
+   Larger epsilon = more simplified (fewer points/corners)
+
+3) closed – Set to True if the shape is closed (like a square), False if it's open (like a line).
+
+
+YT video Link for more information:  https://youtu.be/nSYw9GrakjY?si=EVK0qChpXsxT_mvs

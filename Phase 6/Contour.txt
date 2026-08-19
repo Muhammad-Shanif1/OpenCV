@@ -1,0 +1,78 @@
+In computer vision, contours are curves joining all continuous points (along the boundary), having the same color or intensity(brightness).
+
+Think of contours as outlines of objects — they help you detect and isolate shapes in an image.
+
+📌 Why Use Contours?
+
+Contours are useful for:
+Object detection and recognition
+Shape analysis
+Counting objects
+Measuring object sizes
+Creating bounding boxes or masks
+
+🧠 Example:
+
+Consider this binary image (white object on black background):
+
+0 0 0 0 0
+0 1 1 1 0
+0 1 0 1 0
+0 1 1 1 0
+0 0 0 0 0
+
+
+Here, 1 (white) represents an object. The contour would follow the outer edge of the 1s.
+
+
+🔹 mode: Contour Retrieval Mode
+
+This parameter controls which contours to retrieve, especially in images with nested or multiple objects.
+
+Mode	Description
+cv2.RETR_EXTERNAL	Retrieves only the outermost contours. Ignores inner contours (like holes).
+cv2.RETR_LIST	Retrieves all contours but does not build any parent-child hierarchy.
+cv2.RETR_TREE	Retrieves all contours and builds a full hierarchy (nested objects).
+cv2.RETR_CCOMP	Retrieves all contours and organizes them into a two-level hierarchy: outer and hole.
+🧠 Example:
+
+Consider a white donut on a black background:
+
+Outer circle (white) → donut boundary  
+Inner circle (black) → donut hole  
+
+
+RETR_EXTERNAL: Only finds the outer circle.
+
+RETR_LIST: Finds both circles, but doesn’t tell that one is inside the other.
+
+RETR_TREE: Finds both and builds a parent-child relationship (hole is child of outer).
+
+RETR_CCOMP: Groups them into two levels: external and internal.
+
+🔹 method: Contour Approximation Method
+
+This controls how much detail about the contour shape is saved.
+
+Method	Description
+cv2.CHAIN_APPROX_NONE	Stores all points of the contour. Very detailed, but large.
+cv2.CHAIN_APPROX_SIMPLE	Compresses the contour. Removes redundant points (e.g., points on straight lines).
+cv2.CHAIN_APPROX_TC89_L1 / L2	Advanced Teh-Chin chain approximation algorithms (rarely used).
+📷 Example:
+
+If a contour is a straight line:
+
+Points: (0,0) → (1,0) → (2,0) → (3,0)
+
+
+CHAIN_APPROX_NONE: Keeps all 4 points.
+
+CHAIN_APPROX_SIMPLE: Keeps only start and end: (0,0) and (3,0)
+
+✅ Most Common Combo (Default in Examples):
+contours, hierarchy = cv2.findContours(
+    thresh, 
+    cv2.RETR_TREE, 
+    cv2.CHAIN_APPROX_SIMPLE
+)
+

@@ -1,0 +1,31 @@
+🧮 1. What is scaleFactor?
+Think of zooming out slowly.
+OpenCV looks for faces of different sizes by shrinking the image again and again.
+
+✅ Simple meaning:
+"How fast should we zoom out to look for faces?"
+1.1 means: zoom out by 10% each time (slow and careful)
+1.5 means: zoom out by 50% each time (fast and rough)
+🟢 You should use:
+scaleFactor = 1.1  # Good balance between speed and accuracy
+
+👥 2. What is minNeighbors?
+Think of checking twice (or more) before saying "Yes, it's a face!"
+When OpenCV finds something that looks like a face, it wants to be sure.
+
+✅ Simple meaning:
+"How sure should I be before I say it's a face?"
+3 means: "If I see 3 face-like patterns in the same spot,place, I’ll say it’s a face."
+5 means: "I need 5 patterns in the same spot/place before I call it a face."
+🟢 You should use:
+minNeighbors = 5  # Safer, fewer wrong detections
+
+🔄 Example:
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+This means:
+"Look for faces by zooming out 10% each time, and only accept it as a face if you see 5 overlapping patterns."
+
+🎯 Super Simple Summary:
+Term		What it means in 1 line
+scaleFactor	How much to zoom out when looking for faces
+minNeighbors	How many times we need to be sure it’s a face
